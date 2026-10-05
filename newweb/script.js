@@ -1,31 +1,26 @@
-body {
-    margin: 0;
-    font-family: Arial;
-    background: #667eea;
-    height: 100vh;
+async function searchUser() {
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    const name = document.getElementById("name").value;
 
-.container {
-    background: white;
-    padding: 40px;
-    border-radius: 15px;
-    text-align: center;
-}
+    const response = await fetch(
+        `/.netlify/functions/api?name=${encodeURIComponent(name)}`
+    );
 
-input {
-    padding: 12px;
-    margin: 10px;
-}
+    const users = await response.json();
 
-button {
-    padding: 12px 20px;
-    background: #667eea;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    const result = document.getElementById("result");
+
+    if (users.length === 0) {
+        result.innerHTML = "<p>User not found.</p>";
+        return;
+    }
+
+    result.innerHTML = users.map(user => `
+        <div>
+            <h2>${user.name}</h2>
+            <p>Email: ${user.email}</p>
+            <p>Age: ${user.age}</p>
+        </div>
+    `).join("");
 }
 
