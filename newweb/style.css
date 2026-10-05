@@ -6,7 +6,7 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #0d0d0f 0%, #1a1a1d 35%, #2a2a2e 100%);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -15,21 +15,22 @@ body {
 }
 
 .container {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  background: rgba(24, 24, 27, 0.92);
+  backdrop-filter: blur(12px);
   padding: 50px 40px;
   border-radius: 20px;
   text-align: center;
   width: 100%;
-  max-width: 450px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  max-width: 470px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   animation: slideIn 0.6s ease-out;
 }
 
 @keyframes slideIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(18px);
   }
   to {
     opacity: 1;
@@ -38,15 +39,12 @@ body {
 }
 
 h1 {
-  color: #333;
-  font-size: 2.5rem;
+  color: #f4f4f5;
+  font-size: 2.4rem;
   margin-bottom: 30px;
   font-weight: 700;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   letter-spacing: -1px;
+  text-shadow: 0 0 18px rgba(255,255,255,0.12);
 }
 
 .input-group {
@@ -68,40 +66,43 @@ h1 {
 input {
   flex: 1;
   padding: 14px 18px;
-  border: 2px solid #e0e0e0;
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 12px;
   font-size: 1rem;
+  background: #121214;
+  color: #f5f5f5;
   transition: all 0.3s ease;
   outline: none;
 }
 
 input:focus {
-  border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-  transform: translateY(-2px);
+  border-color: #a1a1aa;
+  box-shadow: 0 0 0 3px rgba(161, 161, 170, 0.12);
+  transform: translateY(-1px);
 }
 
 input::placeholder {
-  color: #999;
+  color: #7c7c82;
 }
 
 button {
-  padding: 14px 32px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
-  border: none;
+  padding: 14px 26px;
+  background: linear-gradient(135deg, #2d2d31 0%, #505057 100%);
+  color: #f5f5f5;
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 12px;
   cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
   white-space: nowrap;
 }
 
 button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #3a3a3d 0%, #5c5c60 100%);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.38);
 }
 
 button:active {
@@ -109,26 +110,26 @@ button:active {
 }
 
 #result {
-  margin-top: 30px;
+  margin-top: 20px;
   max-height: 500px;
   overflow-y: auto;
 }
 
 .user-card {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  padding: 20px;
+  background: linear-gradient(135deg, #1d1d20 0%, #2a2a2d 100%);
+  padding: 20px 18px;
   margin: 15px 0;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
   transition: all 0.3s ease;
   animation: cardSlide 0.5s ease-out;
-  border-left: 4px solid #667eea;
+  border-left: 3px solid #b3b3b8;
 }
 
 @keyframes cardSlide {
   from {
     opacity: 0;
-    transform: translateX(-20px);
+    transform: translateX(-18px);
   }
   to {
     opacity: 1;
@@ -137,51 +138,50 @@ button:active {
 }
 
 .user-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.35);
 }
 
 .user-card h2 {
-  color: #333;
-  font-size: 1.4rem;
+  color: #f4f4f5;
+  font-size: 1.45rem;
   margin-bottom: 10px;
   font-weight: 600;
 }
 
 .user-card p {
-  color: #666;
+  color: #c5c5ca;
   margin: 8px 0;
-  font-size: 0.95rem;
+  font-size: 0.96rem;
 }
 
 .user-card p strong {
-  color: #667eea;
+  color: #f5f5f5;
   font-weight: 600;
 }
 
 #result > p {
-  color: #999;
+  color: #b0b0b5;
   font-size: 1rem;
   animation: fadeIn 0.4s ease-out;
 }
 
-/* Scrollbar styling */
 #result::-webkit-scrollbar {
   width: 6px;
 }
 
 #result::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: rgba(255,255,255,0.04);
   border-radius: 10px;
 }
 
 #result::-webkit-scrollbar-thumb {
-  background: #667eea;
+  background: rgba(255,255,255,0.18);
   border-radius: 10px;
 }
 
 #result::-webkit-scrollbar-thumb:hover {
-  background: #764ba2;
+  background: rgba(255,255,255,0.28);
 }
 
 @media (max-width: 600px) {
