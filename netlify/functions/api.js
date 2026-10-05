@@ -6,7 +6,9 @@ exports.handler = async function(event) {
     try {
 
         const filePath = path.join(
-            process.cwd(),
+            __dirname,
+            "..",
+            "..",
             "database",
             "data.json"
         );
