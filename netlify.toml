@@ -1,0 +1,5 @@
+[build]
+  publish = "newweb"
+
+[functions]
+  directory = "netlify/functions"
