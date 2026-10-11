@@ -6,7 +6,7 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  background: linear-gradient(135deg, #0d0d0f 0%, #1a1a1d 35%, #2a2a2e 100%);
+  background: linear-gradient(135deg, #f8f9fa 0%, #eef3f9 35%, #e8edf5 100%);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -15,15 +15,15 @@ body {
 }
 
 .container {
-  background: rgba(24, 24, 27, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(12px);
   padding: 50px 40px;
   border-radius: 20px;
   text-align: center;
   width: 100%;
   max-width: 470px;
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(15, 23, 42, 0.06);
   animation: slideIn 0.6s ease-out;
 }
 
@@ -39,12 +39,12 @@ body {
 }
 
 h1 {
-  color: #f4f4f5;
+  color: #101828;
   font-size: 2.4rem;
   margin-bottom: 30px;
   font-weight: 700;
   letter-spacing: -1px;
-  text-shadow: 0 0 18px rgba(255,255,255,0.12);
+  text-shadow: 0 0 18px rgba(15, 23, 42, 0.05);
 }
 
 .input-group {
@@ -66,43 +66,43 @@ h1 {
 input {
   flex: 1;
   padding: 14px 18px;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(15, 23, 42, 0.08);
   border-radius: 12px;
   font-size: 1rem;
-  background: #121214;
-  color: #f5f5f5;
+  background: #f5f7fb;
+  color: #111827;
   transition: all 0.3s ease;
   outline: none;
 }
 
 input:focus {
-  border-color: #a1a1aa;
-  box-shadow: 0 0 0 3px rgba(161, 161, 170, 0.12);
+  border-color: #7aa7ff;
+  box-shadow: 0 0 0 3px rgba(122, 167, 255, 0.12);
   transform: translateY(-1px);
 }
 
 input::placeholder {
-  color: #7c7c82;
+  color: #7a7f87;
 }
 
 button {
   padding: 14px 26px;
-  background: linear-gradient(135deg, #2d2d31 0%, #505057 100%);
-  color: #f5f5f5;
-  border: 1px solid rgba(255,255,255,0.08);
+  background: linear-gradient(135deg, #6d8ef7 0%, #4f6fe4 100%);
+  color: #ffffff;
+  border: 1px solid rgba(79, 111, 228, 0.2);
   border-radius: 12px;
   cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 20px rgba(79, 111, 228, 0.2);
   white-space: nowrap;
 }
 
 button:hover {
   transform: translateY(-2px);
-  background: linear-gradient(135deg, #3a3a3d 0%, #5c5c60 100%);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.38);
+  background: linear-gradient(135deg, #5d7ee8 0%, #3d63d6 100%);
+  box-shadow: 0 12px 30px rgba(79, 111, 228, 0.28);
 }
 
 button:active {
@@ -116,14 +116,14 @@ button:active {
 }
 
 .user-card {
-  background: linear-gradient(135deg, #1d1d20 0%, #2a2a2d 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f3f7ff 100%);
   padding: 20px 18px;
   margin: 15px 0;
   border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
   transition: all 0.3s ease;
   animation: cardSlide 0.5s ease-out;
-  border-left: 3px solid #b3b3b8;
+  border-left: 3px solid #7aa7ff;
 }
 
 @keyframes cardSlide {
@@ -139,29 +139,29 @@ button:active {
 
 .user-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 16px 35px rgba(0,0,0,0.35);
+  box-shadow: 0 16px 35px rgba(15, 23, 42, 0.1);
 }
 
 .user-card h2 {
-  color: #f4f4f5;
+  color: #111827;
   font-size: 1.45rem;
   margin-bottom: 10px;
   font-weight: 600;
 }
 
 .user-card p {
-  color: #c5c5ca;
+  color: #4b5563;
   margin: 8px 0;
   font-size: 0.96rem;
 }
 
 .user-card p strong {
-  color: #f5f5f5;
+  color: #111827;
   font-weight: 600;
 }
 
 #result > p {
-  color: #b0b0b5;
+  color: #6b7280;
   font-size: 1rem;
   animation: fadeIn 0.4s ease-out;
 }
@@ -171,17 +171,17 @@ button:active {
 }
 
 #result::-webkit-scrollbar-track {
-  background: rgba(255,255,255,0.04);
+  background: rgba(15, 23, 42, 0.04);
   border-radius: 10px;
 }
 
 #result::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.18);
+  background: rgba(122, 167, 255, 0.35);
   border-radius: 10px;
 }
 
 #result::-webkit-scrollbar-thumb:hover {
-  background: rgba(255,255,255,0.28);
+  background: rgba(122, 167, 255, 0.5);
 }
 
 @media (max-width: 600px) {
