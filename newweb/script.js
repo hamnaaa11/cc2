@@ -12,9 +12,11 @@ async function searchUser() {
 
     if (users.length === 0) {
         result.innerHTML = "<p>User not found.</p>";
+        result.style.color = "white";
         return;
     }
 
+    result.style.color = "white";
     result.innerHTML = users.map(user => `
         <div>
             <h2>${user.name}</h2>
@@ -23,4 +25,3 @@ async function searchUser() {
         </div>
     `).join("");
 }
-
