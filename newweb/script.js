@@ -11,14 +11,14 @@ async function searchUser() {
     const result = document.getElementById("result");
 
     if (users.length === 0) {
-        result.innerHTML = "<p>User not found.</p>";
-        result.style.color = "white";
+        result.innerHTML = "<p style='color: #111;'>User not found.</p>";
+        result.style.color = "#111";
         return;
     }
 
-    result.style.color = "white";
+    result.style.color = "#111";
     result.innerHTML = users.map(user => `
-        <div>
+        <div class="user-card">
             <h2>${user.name}</h2>
             <p>Email: ${user.email}</p>
             <p>Age: ${user.age}</p>
